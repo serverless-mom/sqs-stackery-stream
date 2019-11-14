@@ -1,0 +1,25 @@
+Goals for today:
+* connect a Lambda to Simple Queueing Service
+* Whether we can debug events going into SQS (find them on the AWS console)
+* receive events via another Lambda
+
+
+pieces needed:
+
+Lambdas
+Job Queues (SQS)
+Stackery local edit - construct our CloudFormation template
+AWS CLI to deploy that CF template
+Stackery cloudlocal to update a lambda and use it to send a new message to SQS
+
+Options to do all this:
+
+aws console
+Stackery Tools
+Hand-edit CloudFormation template
+use some other tool to make a CloudFormation
+
+
+Notes:
+In general you really want to use SQS as a job queue and not as anything else
+* when you have a lambda, the two easy to poke it and make it go are to either run it locally or go into the AWS console and send a test event
